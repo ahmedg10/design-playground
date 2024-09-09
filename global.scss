@@ -1,11 +1,6 @@
 @font-face {
-    font-family: 'ServerMono-Regular';
-    src: url('https://intdev-global.s3.us-west-2.amazonaws.com/public/internet-dev/d07f86ea-cba9-4ff3-9f74-d92968910081.woff') format('woff');
-}
-
-@font-face{
-    font-family: 'ServerMono-Italic';
-    src: url('https://intdev-global.s3.us-west-2.amazonaws.com/public/internet-dev/53327590-0e9e-4f51-b6da-f6e28bcbbc67.woff') format('woff');
+  font-family: 'ServerMono-Regular';
+  src: url('https://intdev-global.s3.us-west-2.amazonaws.com/public/internet-dev/688a6d23-53d6-4bd8-8325-40a0593ab179.woff') format('woff');
 }
 
 html,
@@ -96,7 +91,239 @@ video {
   border: 0;
 }
 
-html, body {
+article,
+aside,
+details,
+figcaption,
+figure,
+footer,
+header,
+hgroup,
+menu,
+nav,
+section {
+  display: block;
+}
+
+body.theme-light {
+  --theme-background: var(--color-white);
+  --theme-background-overlay: var(--color-white-4);
+  --theme-background-box-top: rgba(245, 245, 245, 1);
+  --theme-background-box-front: rgba(215, 215, 215, 1);
+  --theme-background-box-side: rgba(235, 235, 235, 1);
+  --theme-foreground: var(--color-black-100-1);
+  --theme-foreground-secondary: var(--color-black-100-2);
+  --theme-text: var(--color-black-100);
+  --theme-border: var(--color-gray-20);
+  --theme-border-box: var(--color-gray-20);
+  --theme-border-subdued: var(--color-gray-40-2);
+  --theme-button: var(--color-black-100);
+  --theme-button-text: var(--color-white);
+  --theme-primary: var(--color-blue-60);
+  --theme-input-active: var(--color-blue-20-5);
+  --theme-success: var(--color-green-60);
+  --theme-success-subdued: var(--color-green-60-3);
+  --theme-error: var(--color-red-60);
+  --theme-error-subdued: var(--color-red-60-3);
+
+  --theme-box-shadow-modal: inset 0 0 0 1px var(--theme-border), 0 0 1px 4px rgba(0, 0, 0, 0.02);
+  --theme-box-shadow-button: 0 1px 2px rgba(0, 0, 0, 0.15);
+  --theme-box-shadow-button-hover: 0 5px 15px rgba(0, 0, 0, 0.3);
+
+  &::-webkit-scrollbar {
+    width: 8px;
+    height: 8px;
+  }
+  &::-webkit-scrollbar {
+    background: transparent;
+  }
+  &::-webkit-scrollbar-track {
+    background: var(--theme-foreground);
+  }
+  &::-webkit-scrollbar-thumb {
+    background: var(--theme-foreground-secondary);
+  }
+  &::-webkit-scrollbar-thumb:hover {
+    background: var(--theme-foreground-secondary);
+  }
+}
+
+body.theme-daybreak {
+  --theme-background: var(--color-black-daybreak-100);
+  --theme-background-overlay: var(--color-daybreak-100-4);
+  --theme-background-box-top: var(--color-gray-70);
+  --theme-background-box-front: var(--color-gray-100);
+  --theme-background-box-side: var(--color-gray-90);
+  --theme-foreground: var(--color-daybreak-70);
+  --theme-foreground-secondary: var(--color-daybreak-60);
+  --theme-text: var(--color-daybreak);
+  --theme-border: var(--color-daybreak-90);
+  --theme-border-box: var(--color-daybreak-80);
+  --theme-border-subdued: var(--color-daybreak-70-3);
+  --theme-button: var(--color-daybreak);
+  --theme-button-text: var(--color-black-daybreak-100);
+  --theme-primary: var(--color-daybreak-20);
+  --theme-input-active: var(--color-daybreak-4);
+  --theme-success: var(--color-green-60);
+  --theme-success-subdued: var(--color-green-60-3);
+  --theme-error: var(--color-red-60);
+  --theme-error-subdued: var(--color-red-60-3);
+
+  --theme-box-shadow-modal: inset 0 0 0 1px var(--color-daybreak-90);
+  --theme-box-shadow-button: 0 0 0 rgba(0, 0, 0, 0.15);
+  --theme-box-shadow-button-hover: 0 0px 0px 4px rgba(255, 255, 255, 0.2);
+
+  &::-webkit-scrollbar {
+    width: 8px;
+    height: 8px;
+  }
+  &::-webkit-scrollbar {
+    background: transparent;
+  }
+  &::-webkit-scrollbar-track {
+    background: var(--theme-foreground);
+  }
+  &::-webkit-scrollbar-thumb {
+    background: var(--theme-foreground-secondary);
+  }
+  &::-webkit-scrollbar-thumb:hover {
+    background: var(--theme-foreground-secondary);
+  }
+}
+
+body.theme-dark {
+  --theme-background: var(--color-black-100);
+  --theme-background-overlay: var(--color-black-100-4);
+  --theme-background-box-top: var(--color-gray-70);
+  --theme-background-box-front: var(--color-gray-100);
+  --theme-background-box-side: var(--color-gray-90);
+  --theme-foreground: var(--color-white-1);
+  --theme-foreground-secondary: var(--color-white-2);
+  --theme-text: var(--color-white);
+  --theme-border: var(--color-gray-90);
+  --theme-border-box: var(--color-gray-80);
+  --theme-border-subdued: var(--color-gray-70-3);
+  --theme-button: var(--color-white);
+  --theme-button-text: var(--color-black-100);
+  --theme-primary: var(--color-gold-30);
+  --theme-input-active: var(--color-blue-20-5);
+  --theme-success: var(--color-green-60);
+  --theme-success-subdued: var(--color-green-60-3);
+  --theme-error: var(--color-red-60);
+  --theme-error-subdued: var(--color-red-60-3);
+
+  --theme-box-shadow-modal: inset 0 0 0 1px var(--color-gray-90);
+  --theme-box-shadow-button: 0 0 0 rgba(0, 0, 0, 0.15);
+  --theme-box-shadow-button-hover: 0 0px 0px 4px rgba(255, 255, 255, 0.2);
+
+  &::-webkit-scrollbar {
+    width: 8px;
+    height: 8px;
+  }
+  &::-webkit-scrollbar {
+    background: transparent;
+  }
+  &::-webkit-scrollbar-track {
+    background: var(--theme-foreground);
+  }
+  &::-webkit-scrollbar-thumb {
+    background: var(--theme-foreground-secondary);
+  }
+  &::-webkit-scrollbar-thumb:hover {
+    background: var(--theme-foreground-secondary);
+  }
+}
+
+body.theme-blue {
+  --theme-background: var(--color-blue-80);
+  --theme-background-overlay: var(--color-blue-80-4);
+  --theme-background-box-top: #6d4c41;
+  --theme-background-box-front: #3e2723;
+  --theme-background-box-side: #4e342e;
+  --theme-foreground: var(--color-blue-20-1);
+  --theme-foreground-secondary: var(--color-blue-20-2);
+  --theme-text: var(--color-blue-10);
+  --theme-border: var(--color-blue-70);
+  --theme-border-box: var(--color-gray-80);
+  --theme-border-subdued: var(--color-blue-60-2);
+  --theme-button: var(--color-blue-70);
+  --theme-button-text: var(--color-blue-10);
+  --theme-primary: var(--color-gold-30);
+  --theme-input-active: var(--color-blue-20-5);
+  --theme-success: var(--color-green-60);
+  --theme-success-subdued: var(--color-green-60-3);
+  --theme-error: var(--color-red-60);
+  --theme-error-subdued: var(--color-red-60-3);
+
+  --theme-box-shadow-modal: inset 0 0 0 1px var(--theme-border);
+  --theme-box-shadow-button: 0 0 0 rgba(0, 0, 0, 0.15);
+  --theme-box-shadow-button-hover: 0 0px 0px 4px rgba(255, 255, 255, 0.2);
+
+  &::-webkit-scrollbar {
+    width: 8px;
+    height: 8px;
+  }
+  &::-webkit-scrollbar {
+    background: transparent;
+  }
+  &::-webkit-scrollbar-track {
+    background: var(--theme-foreground);
+  }
+  &::-webkit-scrollbar-thumb {
+    background: var(--theme-foreground-secondary);
+  }
+  &::-webkit-scrollbar-thumb:hover {
+    background: var(--theme-foreground-secondary);
+  }
+}
+
+body.theme-neon-green {
+  --theme-background: var(--color-neon-green-100);
+  --theme-background-overlay: var(--color-black-100-4);
+  --theme-background-box-top: var(--color-gray-70);
+  --theme-background-box-front: var(--color-gray-100);
+  --theme-background-box-side: var(--color-gray-90);
+  --theme-foreground: var(--color-neon-green-80-1);
+  --theme-foreground-secondary: var(--color-neon-green-80-2);
+  --theme-text: var(--color-neon-green-70);
+  --theme-border: var(--color-neon-green-90);
+  --theme-border-box: var(--color-gray-80);
+  --theme-border-subdued: var(--color-neon-green-70-3);
+  --theme-button: var(--color-neon-green-70);
+  --theme-button-text: var(--color-black-100);
+  --theme-primary: var(--color-white);
+  --theme-input-active: var(--color-white-2);
+  --theme-success: var(--color-white);
+  --theme-success-subdued: var(--color-white-2);
+  --theme-error: var(--color-red-60);
+  --theme-error-subdued: var(--color-red-60-3);
+
+  --theme-box-shadow-modal: inset 0 0 0 1px var(--theme-border);
+  --theme-box-shadow-button: 0 0 0 rgba(0, 0, 0, 0.15);
+  --theme-box-shadow-button-hover: 0 0px 0px 4px rgba(255, 255, 255, 0.2);
+
+  &::-webkit-scrollbar {
+    width: 8px;
+    height: 8px;
+  }
+  &::-webkit-scrollbar {
+    background: transparent;
+  }
+  &::-webkit-scrollbar-track {
+    background: var(--theme-foreground);
+  }
+  &::-webkit-scrollbar-thumb {
+    background: var(--theme-foreground-secondary);
+  }
+  &::-webkit-scrollbar-thumb:hover {
+    background: var(--theme-foreground-secondary);
+  }
+}
+
+
+
+html,
+body {
   --theme-graph-positive-subdued: rgba(61, 219, 217, 0.01);
   --theme-graph-positive: rgba(61, 219, 217, 1);
   --theme-graph-netural: var(--theme-foreground);
@@ -205,7 +432,7 @@ html, body {
   --font-family-mono: 'ServerMono-Regular', Consolas, monaco, monospace;
   --font-family-serif: Georgia, Times New Roman, serif;
 
-  font-family: var(--font-family-mono);
+  font-family: var(--font-family);
   background: var(--theme-background);
   color: var(--theme-text);
   font-variant-numeric: tabular-nums;

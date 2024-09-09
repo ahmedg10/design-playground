@@ -1,0 +1,1 @@
+This folder is for commonly used functions that may be used across the app.

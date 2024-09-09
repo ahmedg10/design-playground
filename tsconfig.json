@@ -17,12 +17,16 @@
         "name": "next"
       }
     ],
+    "baseUrl": ".",
     "paths": {
-      "@root": ["./src/*"],
-      "@components": ["./src/components/*"],
-      "@pages": ["./src/pages/*"],
-      "@system": ["./src/system/*"],
-      
+      "@root/*": ["./*"],
+      "@system/*": ["./system/*"],
+      "@demos/*": ["./demos/*"],
+      "@common/*": ["./common/*"],
+      "@data/*": ["./data/*"],
+      "@components/*": ["./components/*"],
+      "@pages/*": ["./pages/*"],
+      "@modules/*": ["./modules/*"]
     }
   },
   "include": ["next-env.d.ts", "**/*.ts", "**/*.tsx", ".next/types/**/*.ts"],
