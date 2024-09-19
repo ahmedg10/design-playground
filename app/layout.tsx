@@ -1,4 +1,5 @@
 import Providers from '@components/Providers';
+import BlobCursor from '@system/animations/BlobCursor';
 export default function RootLayout({ children }: { children: React.ReactNode }) {
   return (
     <html lang="en">

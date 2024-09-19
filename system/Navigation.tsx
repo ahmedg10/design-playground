@@ -14,12 +14,12 @@ export default function Navigation() {
                 </a>
             </section>
             <section className={styles.stretch}>
-            <span className={styles.item} onClick={() => Utilities.onHandleThemeChange()}>
+                <span className={styles.item} onClick={() => Utilities.onHandleThemeChange()}>
                     Theme
-            </span>
-            <span className={styles.item}>
-                About Us
-            </span>
+                </span>
+                <span className={styles.item}>
+                    About Us
+                </span>
             </section>
             <section className={styles.right}>
                 <span className={styles.item}>Random Button</span>

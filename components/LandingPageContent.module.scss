@@ -1,0 +1,71 @@
+// Main container
+.root {
+    min-height: calc(100dvh - 48px);
+    height: 100%;
+    width: 100%;
+    margin: 128px auto 0 auto;
+}
+
+// Row container
+.row {
+    display: flex; // Ensure this is set
+    flex-wrap: wrap;
+    align-items: stretch; // Ensure children stretch to the same height
+    justify-content: space-between; // Distribute space between children
+
+    &:last-child {
+        border-bottom: 0px;
+    }
+
+    @media (max-width: 768px) {
+        display: block; // Stack children vertically on smaller screens
+    }
+}
+
+.left, .right {
+    padding: 64px 24px;
+    display: flex;
+    width: 50%;
+    align-self: stretch; // Ensure children stretch to the same height
+
+    @media (max-width: 768px) {
+        padding: 24px;
+        width: 100%; // Full width on smaller screens
+    }
+}
+
+.left {
+    background: red;
+}
+
+.right {
+    background: blue;
+}
+
+// Center-aligned content
+.center {
+    padding: 64px 24px;
+    align-self: stretch;
+    margin: 0 auto;
+    display: flex;
+    justify-content: center;
+
+    @media (max-width: 768px) {
+        padding: 24px;
+    }
+}
+
+// Normal content container
+.content {
+    padding: 24px;
+    width: 100%;
+    background: green;
+}
+
+// Centered content container
+.contentCentered {
+    padding: 24px;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+}

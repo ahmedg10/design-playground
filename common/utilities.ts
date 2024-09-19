@@ -10,3 +10,22 @@ export function onHandleThemeChange() {
         body.classList.add('theme-light');
     }
 }
+
+
+export function isEmpty(text: any) {
+    if (text === 0){
+        return false
+    }
+
+    if(!text){
+        return true
+    }
+
+    if(text.length === 0){
+        return true
+    }
+
+    text = text.toString()
+    
+    return Boolean(!text.trim())
+}

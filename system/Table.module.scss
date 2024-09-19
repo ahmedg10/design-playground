@@ -1,0 +1,57 @@
+// lets make this into grid instead you didnt get this to work
+.tableContainer {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 10px auto;
+    border: 1px solid var(--theme-border);
+    width: 50%;
+    height: 50%;
+    position:absolute;
+    top: 100px; /* Adjust as needed */
+    left: 50px; /* Adjust as needed */
+}
+
+.table {
+    display: grid;
+    border: 1px solid var(--theme-border);
+    background-color: var(--theme-background);
+    box-sizing: border-box; /* Include padding and border in the element's total width and height */
+    padding: 10px;
+    border-radius: 10px;
+}
+
+.header, .row {
+    display: flex;
+    width: 100%;
+}
+
+.cell, .empty {
+    flex: 1;
+    overflow-wrap: break-word;
+    white-space: pre-wrap;
+    border-bottom: 1px solid var(--theme-border);
+    padding: 8px 24px 12px 0px;
+    font-size: var(--type-scale-fixed-small);
+}
+
+.header .cell {
+    font-weight: 600;
+    background-color: var(--theme-background);
+}
+
+.row {
+    background-color: var(--theme-background) /* Add background color to rows */
+}
+
+.column a {
+    color: var(--theme-text);
+
+    &:visited {
+        color: var(--theme-text);
+    }
+
+    &:hover {
+        color: var(--theme-primary);
+    }
+}

@@ -1,0 +1,39 @@
+.content{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 30vh;
+    width: 50vw;
+    position: relative;
+    text-align: center;
+   
+}
+
+.Title {
+    font-size: var(--type-scale-1);
+    line-height: 1.15;
+    font-weight: 400;
+}
+
+.tagLine {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: var(--type-scale-2);
+    line-height: 1.15;
+    font-weight: 400;
+    transform: translateX(5%); // Moves the tagline 5% to the right
+
+}
+
+.yourText {
+    margin-right: 0.2em;
+}
+
+.swapperContainer{
+    display: inline-block;
+    min-width: 400px; // Adjust this value as needed
+    text-align: left;
+    width: 400px;
+}

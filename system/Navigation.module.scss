@@ -24,12 +24,49 @@
     }
 }
 
+.right{
+    min-height: 48px;
+    display: inline-flex;
+    flex-shrink: 0;
+    box-shadow: -1px 0 0 0 var(--theme-border);
+    align-items: center;
+    padding: 0 12px 0 12px;
+    transition: 200ms ease width;
+
+    @media (max-width: 768px) {
+        flex-shrink: unset;
+        min-width: auto;
+        width: 100%;
+        box-shadow: 0 0 0 0 var(--theme-border);
+      }
+
+
+}
+
+.stretch{
+  min-width: 10%;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+
+  //  right and left padding
+  padding: 0 12px 0 12px;
+
+  @media (max-width: 768px) {
+    display: none;
+  }
+}
+
 
 .item {
     font-size: var(--type-scale-fixed-tiny);
     text-transform: uppercase;
+    letter-spacing: .2px;
+    padding: 0 12px 0 12px;
     text-decoration: none;
     font-weight: 600;
+    transition: 200ms ease all;
     cursor: pointer;
     user-select: none;
     color: var(--theme-text);
