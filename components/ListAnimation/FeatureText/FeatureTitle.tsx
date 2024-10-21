@@ -11,12 +11,16 @@ type Props = {
 export default function FeatureTitle({children, id } : Props): JSX.Element {
     const ref = useRef<HTMLDivElement>(null)
     const isInView = useInView(ref, {margin: "-50% 0px -50% 0px"})
+    const inViewFeature = useFeatureStore(state => state.inViewFeature)
     const setInViewFeature = useFeatureStore(state => state.setInViewFeature)
     useEffect(() => {
         if(isInView){
             setInViewFeature(id)
         }
-    }, [isInView, id, setInViewFeature])
+        if(!isInView && inViewFeature === id){
+            setInViewFeature(null)
+        }
+    }, [isInView, id, setInViewFeature, inViewFeature])
 
     return (
         <div

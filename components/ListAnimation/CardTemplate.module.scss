@@ -1,5 +1,6 @@
 .position{
   position: relative;
+  font-family: 'ServerMono-Regular', sans-serif; // Add a fallback font
 }
 .card {
   position: absolute;
@@ -14,9 +15,7 @@
   border-radius: 0.75rem;
   padding: 1rem;
   font-size: 0.875rem;
-  transition: box-shadow 0.2s;
-  transition: opacity 0.3s ease-in-out, box-shadow 0.2s; // Add opacity transition here
-  transition: z-index 0s 0.3s;
+  transition: opacity 0.3s ease-in-out, box-shadow 0.2s, z-index 0s 0.3s;
 
   &:hover {
     cursor: pointer;
@@ -111,9 +110,11 @@
 
 .highlight{
   opacity: 1;
-  z-index: 10;
+  z-index: 20;
+  transition: opacity 0.2s ease-in-out, z-index 0s;
 }
 
 .transparent{
   opacity: 0;
-} 
+  transition: opacity 0.2s ease-in-out, z-index 0s 0.2s;
+}

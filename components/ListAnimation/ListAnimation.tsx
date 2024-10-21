@@ -7,27 +7,27 @@ const features = [
     {
         title: 'Use Almost Any Document to Create a Podcast',
         id: 'feature-1',
-        card: <DocumentCard id="feature-1" />
+        card: DocumentCard
     },
     {
         title: 'Chat with the podcast',
         id: 'feature-2',
-        card: <ChatCard id="feature-2" />
+        card: ChatCard
     },
     {
         title: 'Adjust the tone of your podcaster',
         id: 'feature-3',
-        card: <ToneCard id="feature-3" />
+        card: ToneCard
     },
     {
         title: 'Adjust amount of people talking',
         id: 'feature-4',
-        card: <PeopleCard id="feature-4" />    
+        card: PeopleCard  
     },
     {
         title: 'Change the personality of your podcaster',
         id: 'feature-5',
-        card: <PersonalityCard id="feature-5" />
+        card: PersonalityCard
     },
 ]
 
@@ -44,14 +44,15 @@ export default function ListAnimation(): JSX.Element {
                 </ul>
             </div>
             <div className={styles.parentCardWrapper}>
-                <DocumentCard id="feature-1" />
-                <ChatCard id="feature-2" />
-                <ToneCard id="feature-3" />
-                <PeopleCard id="feature-4" />
-                <PersonalityCard id="feature-5" />
-            </div>
+            <div className={styles.cardWrapper}>
+                    {features.map((feature, index) => (
+                    <feature.card id={feature.id} />
 
-            </div>
+                    ))}
+                </div>
+                </div>
+
+            </div> 
     )
 
 }

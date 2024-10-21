@@ -1,11 +1,11 @@
 import styles from "@components/ListAnimation/CardTemplate.module.scss"
-import BookImage from "../../public/ascii-book.png"
-import ToneImage from "../../public/ear.webp"
+import BookImage from "../../public/feature-1.png"
+import ToneImage from "../../public/feature-3.png"
 import Image from "next/image"
 import { motion } from "framer-motion"
-import ChatImage from "../../public/chat.png"
-import PeopleImage from "../../public/people.png"
-import PersonalityImage from "../../public/personality.png"
+import ChatImage from "../../public/Vector-1.png"
+import PeopleImage from "../../public/feature-2.png"
+import PersonalityImage from "../../public/feature-5.png"
 import { useFeatureStore } from "@common/state"
 import React, { useState } from 'react'
 
@@ -14,6 +14,8 @@ type featureCardProps = {
     featureNumber: number,
     title: string,
     imageSrc: any,
+    imageWidth: number,
+    imageHeight: number,
     descriptionTitle: string,
     descriptionText: string
 } & CardProps
@@ -28,6 +30,8 @@ const CardTemplate = function CardTemplate({
     featureNumber,
     title,
     imageSrc,
+    imageWidth,
+    imageHeight,
     descriptionTitle,
     descriptionText
 }: featureCardProps) {
@@ -51,13 +55,13 @@ const CardTemplate = function CardTemplate({
                 </div>
             </div>
             <div className={styles.asciiImage}>
-                <Image src={imageSrc} alt={title} width={200} height={200} />
+                <Image src={imageSrc} alt={title} width={imageWidth} height={imageHeight} />
             </div>
             <motion.div 
                 className={`${styles.cardDescriptionButton} ${styles.noscale}`}
                 initial={{ height: "10%" }}
                 animate={{ height: isHovered ? "40%" : "10%" }}
-                transition={{duration: 0.2 }}
+                transition={{ ease: "easeInOut", duration: 0.2 }}
             >
                 <div className={styles.description}>
                     <div className={styles.descriptionTitle}>
@@ -81,6 +85,8 @@ export const DocumentCard = ({id, color="blue"}: CardProps & {color?: string}) =
             featureNumber={1}
             title="Use Any Document"
             imageSrc={BookImage}
+            imageWidth={100}
+            imageHeight={50}
             descriptionTitle="Learn More About This Feature"
             descriptionText="Our platform now supports PDFs, text, and markdown files, making document uploads simple. PowerPoint support is coming soon, expanding your options even further."
         />
@@ -95,6 +101,8 @@ export const ChatCard = React.memo(({id, color="green"}: CardProps & {color?: st
             featureNumber={2} 
             title="Chat With Your Podcast" 
             imageSrc={ChatImage} 
+            imageWidth={100}
+            imageHeight={100}
             descriptionTitle="Learn More About This Feature"
         descriptionText="We are building both a chat interface, and live response podcast update features, allowing you to chat with your podcast in real time. As you listen, you can ask questions." />
     );
@@ -108,6 +116,8 @@ export const ToneCard = React.memo(({id, color="pink"}: CardProps & {color?: str
             featureNumber={3} 
             title="Adjust The Tone" 
             imageSrc={ToneImage} 
+            imageWidth={100}
+            imageHeight={100}
             descriptionTitle="Learn More About This Feature"
         descriptionText=", you can easily adjust the tone of your content to match your needs. Whether you want a formal, casual, humorous, or authoritative voice. You can tailor your messages to different audiences and contexts, ensuring your content always fits the situation." />
     );
@@ -122,6 +132,8 @@ export const PeopleCard = React.memo(({id, color="purple"}: CardProps & {color?:
             featureNumber={4} 
             title="People" 
             imageSrc={PeopleImage} 
+            imageWidth={160}
+            imageHeight={75}
             descriptionTitle="Learn More About This Feature"
         descriptionText="You can decide amount of people in your podcast, and the AI will adjust to the number of people speaking." />
     );
@@ -135,6 +147,8 @@ export const PersonalityCard = React.memo(({id, color="yellow"}: CardProps & {co
             featureNumber={5} 
             title="Personality" 
             imageSrc={PersonalityImage} 
+            imageWidth={160}
+            imageHeight={75}
             descriptionTitle="Learn More About This Feature"
         descriptionText="You can choose the personality of the AI, and it will adjust its responses to match the personality you choose." />
     );
