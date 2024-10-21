@@ -1,0 +1,94 @@
+.root {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 1200px; // Set a maximum width
+    margin: 0 auto; // Center the container
+    padding: 0 20px; // Add some padding on smaller screens
+}
+
+.left {
+    min-height: 80px;
+    display: inline-flex;
+    align-items: center;
+    width: 50%; // Use percentage-based width
+    padding: 20px 10px 20px 0; // Adjust padding
+
+    @media (min-width: 768px) {
+        padding: 30px 30px 20px 0;
+    }
+}
+
+.right {
+    min-height: 80px;
+    display: inline-flex;
+    align-items: center;
+    width: 50%; // Use percentage-based width
+    padding: 20px 0 20px 10px; // Adjust padding
+    justify-content: flex-end; // Align content to the right
+    @media (min-width: 768px) {
+        padding: 30px 0 20px 20px;
+    }
+}
+
+.logoContainer {
+    display: inline-block;
+    transition: transform 0.3s ease;
+
+    &:hover {
+        transform: scale(1.1);
+    }
+}
+
+
+.button {
+    background-color: var(--theme-button);
+    color: var(--theme-button-text);
+    border-radius: 10px;
+    border: none;
+    padding: 15px 30px;
+    font-size: var(--type-scale-fixed-tiny);
+    cursor: pointer;
+    transition: all 0.3s ease;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    overflow: hidden;
+    width: 150px; // Set a fixed width for the button
+
+    &:hover {
+        background-color: #0056b3;
+        transform: translateY(-2px);
+        border-radius: 0;
+
+        .buttonContent {
+            transform: translateX(-12px);
+        }
+
+        .arrow {
+            opacity: 1;
+            transform: translateX(0);
+        }
+    }
+
+    .buttonContent {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        transition: all 0.3s ease;
+    }
+
+    .arrow {
+        opacity: 0;
+        transform: translateX(-10px);
+        transition: all 0.3s ease;
+        position: absolute;
+        right: 10px;
+    }
+
+    span {
+        transition: all 0.3s ease;
+    }
+}
+

@@ -1,6 +1,4 @@
 'use client';
-
-
 //NOTE:
 //this is using a lot of javascript to get the curos to work, which I really dont like, but it works for now
 //TODO:

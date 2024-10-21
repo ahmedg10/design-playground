@@ -9,14 +9,15 @@ interface HeroProps {
 
 export default function Hero({ className }: HeroProps): JSX.Element {
     return (
-            <div className={`${styles.content} ${className}`}>
-                <div className={styles.Title}>Create a Podcast From</div>
+            <div className={styles.content}>
+                <div className={`${styles.Title}`}>Create a Podcast From</div>
                 <div className={styles.tagLine}>
                     <span className={styles.yourText}>Your</span>
                     <div className={styles.swapperContainer}>
                         <TextSwapper text={['News Letters', 'Lecture Notes', 'Blog Posts', 'Research Papers']} />
                     </div>
                 </div>
+                <div className={styles.subTitle}>Join the waitlist to notify you when we launch our free beta! </div>
             </div>
 
     );

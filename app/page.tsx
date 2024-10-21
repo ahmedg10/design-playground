@@ -13,7 +13,7 @@ import Tag from "@system/Tag";
 import { H3 } from '@system/typography';
 import Hero from '@components/Hero'
 import LandingPageContent from '@components/LandingPageContent'
-
+import Snowfall from "react-snowfall"
 
 export default function Home() {
 
@@ -47,7 +47,21 @@ export default function Home() {
   return (
 
     <MetaTags>
-      <Navigation />
+
+<Snowfall
+        snowflakeCount={100}
+        color="grey"
+        style={{
+          position: "fixed",
+          width: "100vw",
+          height: "100vh",
+          zIndex: -9,
+        }}
+        speed={[0.1,0.5]}
+        radius={[0.5, .8]}
+      />
+    
+
       <LandingPageContent />
     </MetaTags>
 

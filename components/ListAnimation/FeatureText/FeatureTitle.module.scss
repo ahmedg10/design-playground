@@ -1,0 +1,17 @@
+.listItem{
+    font-size: var(--type-scale-3);
+    font-weight: 600;
+    color: #D3D3D3;
+    padding: 100px 0;
+
+}
+
+.highlight{
+    color: #000;
+}
+
+.transition-colors {
+    transition-property: color, background-color, border-color, text-decoration-color, fill, stroke;
+    transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+    transition-duration: 150ms;
+  }

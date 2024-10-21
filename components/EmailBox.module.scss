@@ -1,0 +1,86 @@
+.emailBox {
+  width: 100%;
+  max-width: 700px;
+  margin: 0 auto;
+  padding: 0 5%;
+  padding-bottom: 128px;
+}
+
+.inputButtonWrapper {
+  display: flex;
+  margin-bottom: 10px;
+}
+
+.inputWrapper {
+  position: relative;
+  flex: 1;
+  min-width: 0; // Allows flex item to shrink below its content size
+}
+
+.input {
+  width: 92.5%;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  font-size: 16px;
+  color: #333;
+  background-color: #fff;
+  transition: all 0.2s ease;
+
+  &.invalid {
+    background-color: #ffebee; // Light red background
+    border-color: #f44336; // Red border
+  }
+
+  &.submitted {
+    background-color: #e8f5e9; // Light green background
+    border-color: #4caf50; // Green border
+    transition: background-color 0.15s ease;
+
+  }
+
+  &::placeholder {
+    color: #999;
+    transition: all 0.2s ease;
+  }
+
+  &:focus::placeholder {
+    opacity: 0.5;
+  }
+}
+
+.emailPreview {
+  min-height: 24px;
+  margin-bottom: 10px;
+  font-size: 16px;
+  color: #333;
+}
+
+.submitButton {
+  background-color: var(--theme-button, #007bff);
+  color: white;
+  padding: 10px 20px;
+  border-radius: 10px;
+  cursor: pointer;
+  font-size: var(--type-scale-fixed-tiny);
+  white-space: nowrap;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: background-color 0.2s ease;
+  
+  &:hover {
+    background-color: var(--theme-button-hover, #0056b3);
+  }
+}
+
+@media (max-width: 480px) {
+  .inputButtonWrapper {
+    flex-direction: column;
+    gap: 10px;
+  }
+
+  .submitButton {
+    width: 100%;
+  }
+}

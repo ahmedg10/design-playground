@@ -1,0 +1,38 @@
+.root{
+    display: flex;
+    width: 100%;
+    gap: 80px;
+    align-items: start;
+}
+
+.listWrapper{
+    width: 100%;
+    padding: 50vh 0;
+}
+
+.listItem{
+    font-size: var(--type-scale-3);
+    font-weight: 600;
+    color: #D3D3D3;
+    padding: 100px 0;
+
+}
+
+.parentCardWrapper{
+    width: 100%;
+    position:sticky;
+    top: 0;
+    height:100vh;
+    display: flex;
+    align-items: center;
+}
+
+.cardWrapper{
+    position: sticky; 
+    width: 100%;
+    aspect-ratio: 1/1 ;
+}   
+
+.cardWrapper > * {
+    pointer-events: auto;
+  }

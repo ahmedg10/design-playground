@@ -4,6 +4,7 @@
     height: 100%;
     width: 100%;
     margin: 128px auto 0 auto;
+    cursor: none;
 }
 
 // Row container
@@ -68,4 +69,22 @@
     width: 100%;
     display: flex;
     justify-content: center;
+
+    &.actionButtonContainer {
+        justify-content: center;
+        box-sizing: border-box;
+        margin-top: 5px;
+        background-color: red;
+    }
+        
 }
+
+// Add this new style for the logo container
+.logo {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  margin-bottom: 24px; // Adjust as needed
+}
+

@@ -1,0 +1,31 @@
+.cursor {
+  position: fixed;
+  pointer-events: none;
+  z-index: 9999;
+}
+
+.cursorRect {
+  fill: orange;
+}
+
+.cursorOutline {
+  fill: none;
+  stroke: orange;
+  stroke-width: 2;
+  stroke-dasharray: 10 3;
+}
+
+.hoveringLink {
+  .cursorOutline {
+    animation: rotate 2s linear infinite;
+  }
+}
+
+@keyframes rotate {
+  from {
+    stroke-dashoffset: 0;
+  }
+  to {
+    stroke-dashoffset: -24;
+  }
+}
